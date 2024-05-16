@@ -1,4 +1,4 @@
-# Avoid accidental Sketch file upload 
+# Avoid accidental Sketch file upload
 ###############################################
 ## Please do not remove line 5 - thanks! 🙂 ##
 ###############################################
@@ -15,3 +15,8 @@
 .DS_Store
 
 .prettierignore
+
+# Build stuff
+.cache/
+node_modules
+_public/

@@ -5,18 +5,25 @@
   --color-alpha: 100%;
   --color-peach: 10deg 100% 85%;
   --color-charcoal: 40deg 2% 15%;
+  --color-dodger-blue: 228deg 100% 66%;
+  --color-periwinkle-blue: 228deg 100% 75%;
+  --color-oxford-blue: 228deg 22% 26%;
+  --color-ebony-clay: 229deg 22% 19%;
+  --color-slate-grey: 227deg 13% 52%;
+  --color-bean-red: 0deg 83% 65%;
+  --color-alabaster: 0deg 0% 98%;
 
   /* semantic color themes */
-  --color-text-hsl: var(--color-charcoal);
-  --color-text: hsl(var(--color-charcoal) / var(--color-alpha));
-  --color-sheet-hsl: var(--color-peach);
-  --color-sheet: hsl(var(--color-peach) / var(--color-alpha));
+  --color-text-hsl: var(--color-oxford-blue);
+  --color-text: hsl(var(--color-oxford-blue) / var(--color-alpha));
+  --color-sheet-hsl: var(--color-alabaster);
+  --color-sheet: hsl(var(--color-alabaster) / var(--color-alpha));
 
   @media (prefers-color-scheme: dark) {
-    --color-text-hsl: var(--color-peach);
-    --color-text: hsl(var(--color-peach) / var(--color-alpha));
-    --color-sheet-hsl: var(--color-charcoal);
-    --color-sheet: hsl(var(--color-charcoal) / var(--color-alpha));
+    --color-text-hsl: var(--color-alabaster);
+    --color-text: hsl(var(--color-alabaster) / var(--color-alpha));
+    --color-sheet-hsl: var(--color-ebony-clay);
+    --color-sheet: hsl(var(--color-ebony-clay) / var(--color-alpha));
   }
 
   /* ---------------------------------------------------------------------------
@@ -40,13 +47,12 @@
 
   /* font stacks */
   --text-main:
-    "Trispace",
-    -apple-system,
-    blinkmacsystemfont,
-    "Segoe UI",
-    roboto,
-    helvetica,
-    arial,
+    'Kumbh Sans',
+    Avenir,
+    Montserrat,
+    Corbel,
+    'URW Gothic',
+    source-sans-pro,
     sans-serif,
     "Apple Color Emoji",
     "Segoe UI Emoji",
@@ -69,8 +75,15 @@
   --text-poster: clamp(4.5rem, 8vw, 10rem);
   --text-poster-l: clamp(5.5rem, 9vw, 12rem);
 
+  /* custom font sizes */
+  --text-h1: clamp(2.5rem, 1.3571rem + 2.381vi, 3.5rem); /* @link https://utopia.fyi/clamp/calculator?a=768,1440,40—56 */
+  --text-h2: 20px;
+  --text-h3: 16px;
+  --text-body: clamp(1rem, 0.8571rem + 0.2976vi, 1.125rem); /* @link https://utopia.fyi/clamp/calculator?a=768,1440,16—18 */
+  --text-body-small: 16px;
+
   /* weight */
-  --text-weight: 250;
+  --text-weight: 400;
   --text-width-s: 75;
   --text-width-m: 100;
   --text-width-l: 125;
@@ -91,6 +104,12 @@
   --text-leading-m: calc(var(--text-leading-s) * var(--text-leading-scale));
   --text-leading-l: calc(var(--text-leading-m) * var(--text-leading-scale));
   --text-leading-fluid: calc(0.75rem + 1.25em);
+
+  /* custom line heights */
+  --text-leading-h1: clamp(3rem, 1.8571rem + 2.381vi, 4rem); /* @link https://utopia.fyi/clamp/calculator?a=768,1440,48—64 */
+  --text-leading-h2: 28px;
+  --text-leading-h3: 48px;
+  --text-leading-body: 28px;
 
   /* letter spacing */
   --text-spacing-s: -0.025em;

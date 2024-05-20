@@ -2,10 +2,11 @@
 custom fonts
 ---------------------------------------------------------------------------- */
 
+/* kumbh-sans-regular - latin */
 @font-face {
-  font-family: Trispace;
-  src: url("/assets/fonts/Trispace.woff2") format("woff2");
-  font-weight: 100 800;
-  font-stretch: normal;
   font-display: swap;
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url('/assets/fonts/KumbhSans[YOPQ,wght].woff2') format('woff2');
 }

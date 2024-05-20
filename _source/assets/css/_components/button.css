@@ -1,26 +1,26 @@
 .button {
-  --text-weight: 600;
+  --text-weight: 700;
   --text-width: var(--text-width-s);
-  --button-text: var(--color-text);
-  --button-bg: var(--color-sheet);
-  --button-border: var(--color-text);
+  --button-text: hsl(var(--color-dodger-blue));
+  --button-bg: hsl(var(--color-dodger-blue) / 15.26%);
+  --button-border: hsl(var(--color-dodger-blue) / 15.26%);
   --button-icon: var(--color-text);
 
   color: var(--button-text);
   background-color: var(--button-bg);
-  border: var(--color-text) solid var(--border-weight-s);
+  border: transparent solid var(--border-weight-s);
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: var(--space-xs);
-  padding: var(--space-s);
+  padding: 14px;
+  min-width: 171px;
   font-size: inherit;
   font-family: inherit;
   text-decoration: none;
-  transition: color 0.1s step-sta, background-color 0.1s linear;
-  border-radius: var(--border-radius);
-  line-height: 1;
-  text-transform: uppercase;
+  transition: color 0.1s step-start, background-color 0.1s linear;
+  border-radius: var(--border-radius, 28px);
+  line-height: var(--text-leading-body);
 
   &:visited {
     color: var(--button-text);
@@ -32,8 +32,8 @@
 
   @media (hover: hover) {
     &:hover {
-      --button-text: var(--color-sheet);
-      --button-bg: var(--color-text);
+      /* --button-text: var(--color-sheet); */
+      --button-bg: hsl(var(--color-dodger-blue) / 25%);
 
       cursor: pointer;
     }
@@ -50,10 +50,21 @@
     }
   }
 
+  &.--primary {
+    --button-text: #FFFFFF;
+    --button-bg: hsl(var(--color-dodger-blue));
+    &:hover {
+      --button-bg: hsl(var(--color-periwinkle-blue));
+    }
+  }
+
   &.--inverted {
-    --button-text: var(--color-sheet);
-    --button-bg: var(--color-text);
-    --button-border: var(--color-text);
+    /* --button-text: var(--color-sheet); */
+    --button-bg: #FFFFFF;
+    /* --button-border: var(--color-text); */
+    &:hover {
+      --button-text: hsl(var(--color-periwinkle-blue));
+    }
   }
 
   &.--text-only {

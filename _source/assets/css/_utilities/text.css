@@ -54,4 +54,38 @@ font: transform text display properties
   &.--uppercase { text-transform: uppercase; }
   &.--unlisted { list-style-type: none; }
   &.--undecorated { text-decoration: none; }
+
+  &:where(.h1, .h2, .h3, .body) {
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+    line-height: var(--text-leading);
+  }
+
+  &.h1 {
+    --text-weight: 700;
+    --text-size: clamp(2.5rem, 1.3571rem + 2.381vi, 3.5rem); /* @link https://utopia.fyi/clamp/calculator?a=768,1440,40—56 */
+    --text-leading: clamp(3rem, 1.8571rem + 2.381vi, 4rem); /* @link https://utopia.fyi/clamp/calculator?a=768,1440,48—64 */
+  }
+
+  &.h2 {
+    --text-weight: 700;
+    --text-size: 20px;
+    --text-leading: 28px;
+  }
+
+  &.h3 {
+    --text-weight: 700;
+    --text-size: 16px;
+    --text-leading: 48px;
+    text-transform: uppercase;
+  }
+
+  &.body {
+    --text-size: clamp(1rem, 0.8571rem + 0.2976vi, 1.125rem); /* @link https://utopia.fyi/clamp/calculator?a=768,1440,16—18 */
+    --text-leading: 28px;
+
+    &.--small {
+      --text-size: 16px;
+    }
+  }
 }

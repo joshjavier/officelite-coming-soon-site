@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45 30">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 30">
   <defs><circle id="a" cx="15" cy="15" r="15"/></defs>
   <circle fill="#5175FF" cx="30" cy="15" r="15"/>
-  <mask id="b" fill="#fff"><use xlink:href="#a"/></mask>
-  <use fill="#5175FF" xlink:href="#a"/>
+  <mask id="b" fill="#fff"><use href="#a"/></mask>
+  <use fill="#5175FF" href="#a"/>
   <circle fill="#B4C4FF" opacity=".324" mask="url(#b)" cx="30" cy="15" r="15"/>
 </svg>

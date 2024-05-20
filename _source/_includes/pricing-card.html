@@ -1,0 +1,11 @@
+<li class="pricing-card{% if entry.featured %} --featured{% endif %}">
+  <h2 class="plan">{{ entry.name }}</h2>
+  <p class="price">{{ entry.price }}</p>
+  <p>{{ entry.description }}</p>
+  <ul class="features flow">
+    {%- for feature in entry.features %}
+      <li>{{ feature }}</li>
+    {%- endfor %}
+  </ul>
+  <button class="button">Try for Free</button>
+</li>

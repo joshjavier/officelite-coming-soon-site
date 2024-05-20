@@ -1,0 +1,70 @@
+.pricing-card {
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--text-body-small);
+  margin: 0;
+  padding: 40px;
+
+  /* Reset spacing */
+  * {
+    margin: 0;
+    line-height: var(--text-leading-body);
+  }
+
+  /* Layout */
+  > .plan {
+    margin-block: 0;
+    font-size: var(--text-h2);
+    font-weight: 700;
+    line-height: var(--text-leading-h2);
+  }
+
+  > .price {
+    margin-block: 40px 8px;
+    font-size: var(--text-h1);
+    font-weight: 700;
+    line-height: var(--text-leading-h1);
+  }
+
+  > .features {
+    margin-block: 56px 32px;
+    list-style-type: none;
+    text-align: center;
+
+    > li {
+      color: hsl(var(--color-slate-grey));
+    }
+  }
+
+  ul:has(&) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 24px;
+  }
+
+  /* Variants */
+  &.--featured {
+    background-color: hsl(var(--color-dodger-blue));
+    background-image: url('/assets/images/home/bg-pattern-pricing.svg');
+    background-position: center 102%;
+    background-repeat: no-repeat;
+
+    :is(h2, p, li) {
+      color: #FFFFFF;
+    }
+
+    button {
+      --button-bg: #FFFFFF;
+      &:hover {
+        --button-text: hsl(var(--color-periwinkle-blue));
+      }
+    }
+
+    ::selection {
+      color: #FFFFFF;
+      background-color: hsl(var(--color-oxford-blue));
+    }
+  }
+}

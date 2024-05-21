@@ -8,12 +8,12 @@ layout: page.html
 <section class="hero">
   <h1 class="text h1">A simple solution to complex tasks is coming soon</h1>
   <p class="text body">Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</p>
-  <button class="button">Get Started</button>
+  <button class="button --primary">Get Started</button>
 </section>
 
-<article class="pricing">
+<article class="pricing grid__item --span-12">
   <h2 class="display --sr-only">Pricing</h2>
-  <ul>
+  <ul class="switcher">
     {% render 'pricing-card.html' for pricing.plans as entry %}
   </ul>
 </article>

@@ -1,11 +1,9 @@
 .pricing-card {
   border-radius: 13px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-size: var(--text-body-small);
   margin: 0;
   padding: 40px;
+  text-align: center;
 
   /* Reset spacing */
   * {
@@ -14,24 +12,23 @@
   }
 
   /* Layout */
-  > .plan {
+  & .plan {
     margin-block: 0;
     font-size: var(--text-h2);
     font-weight: 700;
     line-height: var(--text-leading-h2);
   }
 
-  > .price {
+  & .price {
     margin-block: 40px 8px;
     font-size: var(--text-h1);
     font-weight: 700;
     line-height: var(--text-leading-h1);
   }
 
-  > .features {
+  & .features {
     margin-block: 56px 32px;
     list-style-type: none;
-    text-align: center;
 
     > li {
       color: hsl(var(--color-slate-grey));
@@ -39,9 +36,14 @@
   }
 
   ul:has(&) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
     gap: 30px 24px;
+    --threshold: 927px;
+    > li { margin: 0; }
+  }
+
+  .container:has(&) {
+    container: pricing-card / inline-size;
   }
 
   /* Variants */
@@ -65,6 +67,30 @@
     ::selection {
       color: #FFFFFF;
       background-color: hsl(var(--color-oxford-blue));
+    }
+  }
+
+  /* Landscape layout */
+  @container pricing-card (min-width: 500px) {
+    padding: 48px;
+    text-align: left;
+
+    & .inner {
+      display: flex;
+      > :first-child { width: 60%; }
+      > :last-child { width: 40%; }
+    }
+
+    & .price {
+      margin-block: 16px 4px;
+    }
+
+    & .features {
+      margin-block: 44px 4px;
+    }
+
+    &.--featured {
+      background-position: 165% center;
     }
   }
 }

@@ -8,8 +8,8 @@ grid: a simple grid system for page composition
   column-gap: min(5vw, 5rem);
 
   @media (--viewport-medium) {
-    grid-template-columns: 1fr repeat(12, minmax(0, 3em)) 1fr;
-    column-gap: min(4vw, 3em);
+    grid-template-columns: 1fr repeat(12, minmax(0, 65px)) 1fr;
+    column-gap: min(24px, 30px);
   }
 
   & > .grid {

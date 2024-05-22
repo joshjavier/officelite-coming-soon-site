@@ -159,3 +159,7 @@ hr {
   border: 0;
   border-top: var(--border-weight-s) solid var(--color-text);
 }
+
+time {
+  color: hsl(var(--color-dodger-blue));
+}

@@ -1,0 +1,55 @@
+countdown-timer {
+  display: flex;
+  column-gap: 16px;
+
+  > .number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100px;
+    height: 128px;
+    border-radius: 13px;
+    background-color: hsl(var(--color-dodger-blue) / 10%);
+    --text-weight: 700;
+
+    > :first-child {
+      --color-text: hsl(var(--color-dodger-blue));
+      line-height: var(--text-leading-h1);
+      font-size: var(--text-h1);
+      margin-bottom: 3.5px;
+    }
+
+    > :last-child {
+      font-size: var(--text-body-small);
+      line-height: var(--text-leading-h2);
+      opacity: 50%;
+    }
+  }
+
+  /* Dark variant */
+  &.--dark {
+    > .number {
+      background-color: hsl(var(--color-oxford-blue));
+
+      > * {
+        --color-text: #FFFFFF;
+
+        &::selection {
+          color: hsl(var(--color-oxford-blue));
+          opacity: 100%;
+        }
+      }
+
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    > .number {
+      background-color: hsl(var(--color-oxford-blue));
+
+      > :first-child { --color-text: #FFFFFF; }
+    }
+  }
+}

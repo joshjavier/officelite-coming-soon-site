@@ -20,5 +20,8 @@
     "publish:prod": "ELEVENTY_ENV=prod eleventy",
     "lint:css": "stylelint \"_source/**/*.css\" --fix",
     "lint:js": "eslint \"_source/**/*.js\" --fix"
+  },
+  "dependencies": {
+    "parse-ms": "^4.0.0"
   }
 }

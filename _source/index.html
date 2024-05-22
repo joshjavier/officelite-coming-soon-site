@@ -18,12 +18,10 @@ layout: page.html
   </ul>
 </article>
 
-    <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-    <!-- Coming 4 Nov 2020 -->
-
-    <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-    <!-- 47 Days
-    07 Hours
-    56 Min
-    14 Sec
-    Get Started -->
+<div class="flex --align-items-center --justify-between grid__item --span-12">
+  <div>
+    <p class="text h3 space --bottom-flush">Coming <time datetime="2020-11-04">4 Nov 2020</time></p>
+    <countdown-timer date="2020-11-04" class="--dark"></countdown-timer>
+  </div>
+  <button class="button --primary text body --small">Get Started</button>
+</div>

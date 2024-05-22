@@ -78,6 +78,7 @@ font: transform text display properties
     --text-size: 16px;
     --text-leading: 48px;
     text-transform: uppercase;
+    letter-spacing: 5px;
   }
 
   &.body {

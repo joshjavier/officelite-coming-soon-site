@@ -1,33 +1,69 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import './App.css'
+
+import Header from "./components/header"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <Header />
+      {/* Hero Section */}
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h1>A simple solution to complex tasks is coming soon</h1>
+        <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</p>
+        <button>Get Started</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      {/* Pricing Cards */}
+      <article>
+        <h3>Basic</h3>
+
+        <p>Free</p>
+        <p>Up to 5 users for free</p>
+
+        <ul>
+          <li>Basic document collaboration</li>
+          <li>2 gb storage</li>
+          <li>Great security and support</li>
+        </ul>
+
+        <button>Try for Free</button>
+      </article>
+
+      <article>
+        <h3>Pro</h3>
+
+        <p>$9.99</p>
+        <p>Per user, billed monthly</p>
+
+        <ul>
+          <li>All essential integrations</li>
+          <li>50 gb storage</li>
+          <li>More control and insights</li>
+        </ul>
+
+        <button>Try for Free</button>
+      </article>
+
+      <article>
+        <h3>Ultimate</h3>
+
+        <p>$19.99</p>
+        <p>Per user, billed monthly</p>
+
+        <ul>
+          <li>Robust work management</li>
+          <li>100 gb storage</li>
+          <li>VIP support</li>
+        </ul>
+
+        <button>Try for Free</button>
+      </article>
+
+      {/* Footer */}
+      {/* Countdown Timer */}
     </>
   )
 }

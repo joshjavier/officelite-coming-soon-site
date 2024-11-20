@@ -27,3 +27,5 @@ dist-ssr
 *.sketch
 *.xd
 *.fig
+
+*storybook.log

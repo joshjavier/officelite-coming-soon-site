@@ -1,0 +1,33 @@
+.btn {
+  border: none;
+  padding: 14px;
+  min-width: 171px;
+  border-radius: 28px;
+  background-color: color-mix(in srgb, var(--color-dodger-blue) var(--bg-opacity, 15.26%), #fff);
+  color: var(--text-color, var(--color-dodger-blue));
+  font-weight: 700;
+  line-height: 28px;
+  cursor: pointer;
+  touch-action: manipulation;
+
+  &.btn-primary {
+    --bg-opacity: 100%;
+    --text-color: #fff;
+  }
+
+  &.btn-light {
+    background-color: #fff;
+  }
+}
+
+[data-hovered] {
+  --bg-opacity: 25%;
+
+  &.btn-primary {
+    background-color: var(--color-malibu);
+  }
+
+  &.btn-light {
+    color: var(--color-malibu);
+  }
+}

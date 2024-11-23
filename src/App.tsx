@@ -3,6 +3,7 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
+import { Button } from "./components/button"
 import Header from "./components/header"
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <div>
         <h1>A simple solution to complex tasks is coming soon</h1>
         <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</p>
-        <button>Get Started</button>
+        <Button color="primary">Get Started</Button>
       </div>
 
       {/* Pricing Cards */}
@@ -29,7 +30,7 @@ function App() {
           <li>Great security and support</li>
         </ul>
 
-        <button>Try for Free</button>
+        <Button>Try for Free</Button>
       </article>
 
       <article>
@@ -44,7 +45,7 @@ function App() {
           <li>More control and insights</li>
         </ul>
 
-        <button>Try for Free</button>
+        <Button>Try for Free</Button>
       </article>
 
       <article>
@@ -59,7 +60,7 @@ function App() {
           <li>VIP support</li>
         </ul>
 
-        <button>Try for Free</button>
+        <Button>Try for Free</Button>
       </article>
 
       {/* Footer */}

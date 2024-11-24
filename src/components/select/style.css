@@ -1,0 +1,85 @@
+.select-container {
+  --trigger-width: 360px;
+  width: min(100%, var(--trigger-width));
+}
+
+.react-aria-Select[data-open] .dropdown-arrow {
+  transform: rotateZ(180deg);
+}
+
+.react-aria-Button {
+  border: 1px solid transparent;
+  border-bottom-color: rgb(var(--color-waterloo-rgb) / 50%);
+  padding: 16px 24px 16px 16px;
+  line-height: 28px;
+  width: 100%;
+  color: var(--color-oxford-blue);
+  font-weight: 700;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.react-aria-SelectValue [slot=description] {
+  margin-left: 8px;
+  opacity: 40%;
+}
+
+.react-aria-Popover[data-trigger=Select] {
+  min-width: var(--trigger-width);
+
+  & .react-aria-ListBox {
+    border-radius: 8px;
+    border: 1px solid rgb(var(--color-oxford-blue-rgb) / 15.33%);
+    background-color: #fff;
+    box-shadow: var(--shadow);
+
+    > :first-child {
+      padding-top: 23px;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+
+    > :last-child {
+      padding-bottom: 23px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    > * + * {
+      position: relative;
+      margin-top: 1px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 83.013%;
+        height: 1px;
+        background-color: var(--color-waterloo);
+        opacity: 25%;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.react-aria-ListBoxItem {
+  font-weight: 700;
+  color: var(--color-oxford-blue);
+  padding: 16px 31px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  & [slot=description] {
+    opacity: 40%;
+  }
+
+  & .icon-check {
+    margin-left: auto;
+    margin-right: 7px;
+  }
+}

@@ -1,30 +1,34 @@
-import { useEffect, useRef, useState } from 'react'
+import {
+  CountdownProps,
+  CountdownRenderProps,
+  default as ReactCountdown,
+} from 'react-countdown'
+import { Segment } from './segment'
+
 import './style.css'
 
-interface Props {
-  value?: number
+const renderer = ({ days, hours, minutes, seconds }: CountdownRenderProps) => {
+  return (
+    <>
+      <Segment value={days} label='days' />
+      <Segment value={hours} label='hours' />
+      <Segment value={minutes} label='min' />
+      <Segment value={seconds} label='sec' />
+    </>
+  )
 }
 
-export const Countdown = ({ value = 0 }: Props) => {
-  const [number, setNumber] = useState<number>(value)
-  const intervalId = useRef<number | null>(null)
+interface Props extends CountdownProps {
+  color: 'light' | 'dark'
+}
 
-  useEffect(() => {
-    if (number === 0) {
-      clearInterval(intervalId.current!)
-      return
-    }
-
-    intervalId.current = window.setInterval(() => {
-      setNumber(number - 1)
-    }, 1000)
-
-    return () => {
-      clearInterval(intervalId.current!)
-    }
-  }, [number])
-
+export const Countdown = ({ date, color = 'light', ...props }: Props) => {
   return (
-    <div className="countdown">{String(number).padStart(2, '0')}</div>
+    <article
+      className="countdown"
+      data-theme={color === 'dark' ? 'dark' : undefined}
+    >
+      <ReactCountdown date={date} renderer={renderer} {...props} />
+    </article>
   )
 }

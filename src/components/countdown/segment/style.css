@@ -33,7 +33,7 @@
     opacity: 50%;
   }
 
-  &[data-theme=dark] {
+  &:is([data-theme=dark], [data-theme=dark] &) {
     background-color: var(--color-oxford-blue);
 
     > * {

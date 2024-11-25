@@ -1,3 +1,4 @@
+import React from 'react'
 import NumberFlow from '@number-flow/react'
 
 import './style.css'
@@ -8,7 +9,7 @@ interface Props {
   color?: 'light' | 'dark'
 }
 
-export const Segment = ({ value = 0, label, color = 'light' }: Props) => {
+export const Segment = React.memo(({ value = 0, label, color = 'light' }: Props) => {
   console.log(value)
   return (
     <div className='segment' data-theme={color === 'dark' ? 'dark' : undefined}>
@@ -16,4 +17,6 @@ export const Segment = ({ value = 0, label, color = 'light' }: Props) => {
       {label && <span>{label}</span>}
     </div>
   )
-}
+})
+
+Segment.displayName = 'Segment'

@@ -9,10 +9,15 @@ const meta: Meta<typeof Countdown> = {
 export default meta
 type Story = StoryObj<typeof Countdown>
 
-export const Default: Story = {}
-
-export const Static: Story = {
+export const Default: Story = {
   args: {
-    value: 14,
+    date: Date.now() + 100000,
+  }
+}
+
+export const Dark: Story = {
+  args: {
+    date: Date.now() + 100000,
+    color: 'dark',
   }
 }

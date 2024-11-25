@@ -37,6 +37,9 @@
 
   &.featured {
     background-color: var(--color-dodger-blue);
+    background-image: url('../../assets/home/bg-pattern-pricing.svg');
+    background-position: center bottom 7px;
+    background-repeat: no-repeat;
     color: #fff;
 
     > ul {
@@ -74,6 +77,10 @@
 
     > :nth-child(3) {
       margin-block: 4px 24px;
+    }
+
+    &.featured {
+      background-position: right 128px center;
     }
   }
 }

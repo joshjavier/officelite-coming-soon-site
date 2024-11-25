@@ -1,0 +1,43 @@
+.segment {
+  /* @link https://utopia.fyi/clamp/calculator?a=375,768,4—13 */
+  --fluid-4-13: clamp(0.25rem, -0.2867rem + 2.2901vw, 0.8125rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=375,768,72—100 */
+  --fluid-72-100: clamp(4.5rem, 2.8302rem + 7.1247vw, 6.25rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=375,768,92—128 */
+  --fluid-92-128: clamp(5.75rem, 3.6031rem + 9.1603vw, 8rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=375,768,32—56 */
+  --fluid-32-56: clamp(2rem, 0.5687rem + 6.1069vw, 3.5rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=375,768,12—16 */
+  --fluid-12-16: clamp(0.75rem, 0.5115rem + 1.0178vw, 1rem);
+
+  border-radius: var(--fluid-4-13);
+  width: var(--fluid-72-100);
+  height: var(--fluid-92-128);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(var(--color-dodger-blue-rgb) / 10%);
+  font-weight: 700;
+
+  > :nth-child(1) {
+    font-size: var(--fluid-32-56);
+    line-height: 85%;
+    --number-flow-char-height: 85%;
+    color: var(--color-dodger-blue);
+  }
+
+  > :nth-child(2) {
+    font-size: var(--fluid-12-16);
+    color: var(--color-oxford-blue);
+    opacity: 50%;
+  }
+
+  &[data-theme=dark] {
+    background-color: var(--color-oxford-blue);
+
+    > * {
+      color: #fff;
+    }
+  }
+}

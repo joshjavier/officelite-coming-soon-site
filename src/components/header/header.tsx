@@ -1,11 +1,11 @@
 import logo from '../../assets/shared/logo.svg'
 
-const Header = () => {
+import './style.css'
+
+export const Header = () => {
   return (
     <header>
       <img src={logo} alt="officelite home" />
     </header>
   )
 }
-
-export default Header

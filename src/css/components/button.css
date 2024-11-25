@@ -18,6 +18,12 @@
   &.btn-light {
     background-color: #fff;
   }
+
+  &:where(a) {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+  }
 }
 
 [data-hovered] {

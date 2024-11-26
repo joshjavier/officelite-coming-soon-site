@@ -1,0 +1,54 @@
+.sign-up {
+  --wrapper-max-width: 1110px;
+
+  > header {
+    margin-block: var(--fluid-46-81) var(--fluid-80-126);
+  }
+
+  > main {
+    justify-content: space-between;
+    padding-bottom: var(--fluid-87-123);
+
+    > .left {
+      max-width: 540px;
+    }
+
+    > .right {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 445px;
+    }
+  }
+}
+
+.launch-countdown {
+  color: var(--color-oxford-blue);
+
+  > p {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 5px;
+    margin-top: 40px;
+    margin-bottom: 8px;
+
+    > span {
+      color: var(--color-dodger-blue);
+    }
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  .sign-up {
+    text-align: center;
+
+    > main {
+      justify-content: center;
+
+      > .left {
+        max-width: 572px;
+      }
+    }
+  }
+}

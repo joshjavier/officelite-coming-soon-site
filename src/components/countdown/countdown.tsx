@@ -19,7 +19,7 @@ const renderer = ({ days, hours, minutes, seconds }: CountdownRenderProps) => {
 }
 
 interface Props extends CountdownProps {
-  color: 'light' | 'dark'
+  color?: 'light' | 'dark'
 }
 
 export const Countdown = ({ date, color = 'light', ...props }: Props) => {

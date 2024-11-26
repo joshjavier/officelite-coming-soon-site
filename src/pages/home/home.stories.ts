@@ -4,6 +4,9 @@ import { Home } from './home'
 const meta: Meta<typeof Home> = {
   component: Home,
   title: 'Pages/Home',
+  parameters: {
+    layout: 'fullscreen',
+  },
 }
 
 export default meta

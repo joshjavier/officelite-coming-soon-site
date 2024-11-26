@@ -14,6 +14,7 @@
   --color-text: var(--color-waterloo);
 
   --shadow: 0 50px 50px -25px hsl(227 35% 45% / 74.71%);
+  --card-shadow: 0 50px 50px -25px hsl(227 35% 45% / 24.72%);
 
   /* Typography */
   --font-sans: 'Kumbh Sans', Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
@@ -51,4 +52,8 @@
   --fluid-32-24: clamp(1.5rem, 2.4771rem + -2.0356vw, 2rem);
   /* @link https://utopia.fyi/clamp/calculator?a=375,1440,100—184 */
   --fluid-100-184: clamp(6.25rem, 4.4014rem + 7.8873vw, 11.5rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,100—82 */
+  --fluid-100-82: clamp(5.125rem, 7.5357rem + -2.6786vw, 6.25rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,100—91 */
+  --fluid-100-91: clamp(5.6875rem, 6.8929rem + -1.3393vw, 6.25rem);
 }

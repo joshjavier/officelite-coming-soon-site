@@ -6,6 +6,7 @@
   align-items: center;
   background-color: #fff;
   color: var(--color-oxford-blue);
+  box-shadow: var(--card-shadow);
 
   & * {
     margin: 0;

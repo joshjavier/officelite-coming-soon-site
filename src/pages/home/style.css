@@ -6,8 +6,67 @@
   }
 
   > .pricing {
-    margin-block: var(--fluid-100-184) var(--fluid-100-82);
-    --threshold: 52rem;
+    margin-top: var(--fluid-100-184);
+    --threshold: 54rem;
     gap: var(--fluid-32-24) 30px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 50%;
+      z-index: -1;
+      background-color: var(--color-ebony-clay);
+    }
+  }
+
+  > footer {
+    background-color: var(--color-ebony-clay);
+    background-image: url(../../assets/home/bg-pattern-footer.svg);
+    background-position: right 10vw top 50%;
+    background-repeat: no-repeat;
+    color: #fff;
+
+    > .inner {
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: var(--fluid-100-82) var(--fluid-100-91);
+    }
+  }
+
+  & .launch-countdown {
+    > p {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 48px;
+      letter-spacing: 5px;
+      margin-top: 0;
+
+      > span {
+        color: var(--color-dodger-blue);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home > footer {
+    background-position: 50%;
+
+    > .inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    & .launch-countdown > :nth-child(2) {
+      margin-top: 8px;
+    }
   }
 }

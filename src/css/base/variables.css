@@ -1,4 +1,5 @@
 :root {
+  /* Colors */
   --color-dodger-blue: #5175FF;
   --color-dodger-blue-rgb: 81 117 255;
   --color-malibu: #829CFF;
@@ -14,5 +15,26 @@
 
   --shadow: 0 50px 50px -25px hsl(227 35% 45% / 74.71%);
 
+  /* Typography */
   --font-sans: 'Kumbh Sans', Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+
+  /* Custom fluid tokens */
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,40—56 */
+  --fluid-40-56: clamp(2.5rem, 1.3571rem + 2.381vw, 3.5rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,48—64 */
+  --fluid-48-64: clamp(3rem, 1.8571rem + 2.381vw, 4rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,16—18 */
+  --fluid-16-18: clamp(1rem, 0.8571rem + 0.2976vw, 1.125rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,26—28 */
+  --fluid-26-28: clamp(1.625rem, 1.4821rem + 0.2976vw, 1.75rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,24—32 */
+  --fluid-24-32: clamp(1.5rem, 0.9286rem + 1.1905vw, 2rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=375,1440,171—475 */
+  --fluid-171-475: clamp(10.6875rem, 3.9974rem + 28.5446vw, 29.6875rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=375,1440,192—531 */
+  --fluid-192-531: clamp(12rem, 4.5396rem + 31.831vw, 33.1875rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=375,1440,9—25 */
+  --fluid-9-25: clamp(0.5625rem, 0.2104rem + 1.5023vw, 1.5625rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=768,1440,64—95 */
+  --fluid-64-95: clamp(4rem, 1.7857rem + 4.6131vw, 5.9375rem);
 }

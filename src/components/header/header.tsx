@@ -4,7 +4,7 @@ import './style.css'
 
 export const Header = () => {
   return (
-    <header>
+    <header className='center'>
       <img src={logo} alt="officelite home" />
     </header>
   )

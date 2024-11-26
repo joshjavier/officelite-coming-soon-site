@@ -1,17 +1,11 @@
 import { Link } from 'react-aria-components'
+import type { PricingPlan } from '../../data/entities'
 
 import './style.css'
 
 interface Props {
-  plan: {
-    name: string
-    price: string | number
-    description?: string
-    features?: string[]
-    ctaText?: string
-    ctaLink?: string
-  }
-  featured: boolean
+  plan: PricingPlan
+  featured?: boolean
 }
 
 export const PricingCard = ({ plan, featured = false }: Props) => {
@@ -20,7 +14,7 @@ export const PricingCard = ({ plan, featured = false }: Props) => {
   }
 
   return (
-    <article className={['pricing', featured ? 'featured' : ''].join(' ')}>
+    <article className={['pricing-card', featured ? 'featured' : ''].join(' ')}>
       <h3>{plan.name}</h3>
       <p>{plan.price}</p>
       <p>{plan.description}</p>

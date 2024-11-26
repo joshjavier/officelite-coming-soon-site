@@ -1,6 +1,5 @@
-.pricing {
+.pricing-card {
   border-radius: 13px;
-  min-width: 350px;
   padding: 40px;
   display: inline-flex;
   flex-direction: column;
@@ -35,6 +34,10 @@
     }
   }
 
+  > :last-child {
+    margin-top: auto;
+  }
+
   &.featured {
     background-color: var(--color-dodger-blue);
     background-image: url('../../assets/home/bg-pattern-pricing.svg');
@@ -49,8 +52,8 @@
   }
 }
 
-@media screen and (min-width: 745px) and (max-width: 800px) {
-  .pricing {
+@media screen and (min-width: 513px) and (max-width: 913px) {
+  .pricing-card {
     padding: 48px;
     display: grid;
     grid-template-columns: 1.2fr .8fr;
@@ -82,5 +85,13 @@
     &.featured {
       background-position: right 128px center;
     }
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .pricing-card {
+    max-width: 350px;
+    margin-inline: auto;
+    text-align: center;
   }
 }

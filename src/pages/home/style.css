@@ -1,0 +1,13 @@
+.home {
+  --wrapper-max-width: 1110px;
+
+  > header {
+    margin-block: var(--fluid-46-81) var(--fluid-80-104);
+  }
+
+  > .pricing {
+    margin-block: var(--fluid-100-184) var(--fluid-100-82);
+    --threshold: 52rem;
+    gap: var(--fluid-32-24) 30px;
+  }
+}

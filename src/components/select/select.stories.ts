@@ -3,7 +3,7 @@ import { Select } from './select'
 
 const meta: Meta<typeof Select> = {
   component: Select,
-  title: 'Select',
+  title: 'Components/Select',
 }
 
 export default meta

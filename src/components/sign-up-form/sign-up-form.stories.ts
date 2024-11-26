@@ -3,7 +3,7 @@ import { SignupForm } from './signup-form'
 
 const meta: Meta<typeof SignupForm> = {
   component: SignupForm,
-  title: 'SignupForm',
+  title: 'Components/SignupForm',
 }
 
 export default meta

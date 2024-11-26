@@ -3,7 +3,7 @@ import { PricingCard } from './pricing-card'
 
 const meta: Meta<typeof PricingCard> = {
   component: PricingCard,
-  title: 'PricingCard',
+  title: 'Components/PricingCard',
 }
 
 export default meta

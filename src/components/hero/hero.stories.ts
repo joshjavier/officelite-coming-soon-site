@@ -3,7 +3,7 @@ import { Hero } from './hero'
 
 const meta: Meta<typeof Hero> = {
   component: Hero,
-  title: 'Hero',
+  title: 'Components/Hero',
 }
 
 export default meta

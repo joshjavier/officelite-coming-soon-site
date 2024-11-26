@@ -3,7 +3,7 @@ import { Countdown } from './countdown'
 
 const meta: Meta<typeof Countdown> = {
   component: Countdown,
-  title: 'Countdown',
+  title: 'Components/Countdown',
 }
 
 export default meta

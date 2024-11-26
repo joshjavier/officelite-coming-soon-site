@@ -3,7 +3,7 @@ import { Segment } from './segment'
 
 const meta: Meta<typeof Segment> = {
   component: Segment,
-  title: 'Segment',
+  title: 'Components/Segment',
 }
 
 export default meta

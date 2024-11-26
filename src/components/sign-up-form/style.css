@@ -1,0 +1,24 @@
+.react-aria-Form {
+  /* border: 1px solid red; */
+  border-radius: 13px;
+  background-color: #fff;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 445px;
+  padding: 24px 24px var(--fluid-24-51);
+  box-shadow: var(--shadow);
+
+  > * {
+    width: min(100%, 360px);
+  }
+
+  > * + :not(button) {
+    margin-top: 8px;
+  }
+
+  & [type=submit] {
+    margin-top: 40px;
+  }
+}

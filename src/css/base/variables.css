@@ -37,4 +37,6 @@
   --fluid-9-25: clamp(0.5625rem, 0.2104rem + 1.5023vw, 1.5625rem);
   /* @link https://utopia.fyi/clamp/calculator?a=768,1440,64—95 */
   --fluid-64-95: clamp(4rem, 1.7857rem + 4.6131vw, 5.9375rem);
+  /* @link https://utopia.fyi/clamp/calculator?a=375,768,24—51 */
+  --fluid-24-51: clamp(1.5rem, -0.1102rem + 6.8702vw, 3.1875rem);
 }

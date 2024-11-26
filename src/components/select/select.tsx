@@ -14,7 +14,7 @@ import IconCheck from '../../assets/sign-up/icon-check.svg?react'
 
 import './style.css'
 
-interface Option {
+export interface Option {
   label: string
   description?: string
 }
@@ -33,7 +33,7 @@ export const Select = ({ label, items, ...props }: Props) => {
           <SelectValue />
           <IconArrowDown className='dropdown-arrow' aria-hidden="true" />
         </Button>
-        <Popover offset={24}>
+        <Popover>
           <ListBox items={items}>
             {item => <Option id={item.label} label={item.label} description={item.description} />}
           </ListBox>

@@ -12,9 +12,13 @@ export const TextField = ({ label, ...props }: Props) => {
   return (
     <div className='text-field-container'>
       <AriaTextField aria-label={label} {...props}>
-        <Input />
+        {({ isInvalid }) => (
+          <>
+            <Input />
+            {isInvalid && <IconCross className='icon-error' aria-hidden="true" />}
+          </>
+        )}
       </AriaTextField>
-      {props.isInvalid && <IconCross className='icon-error' aria-hidden="true" />}
     </div>
   )
 }

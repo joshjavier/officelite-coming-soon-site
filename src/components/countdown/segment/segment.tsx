@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const Segment = React.memo(({ value = 0, label, color = 'light' }: Props) => {
-  console.log(value)
+  // console.log(value)
   return (
     <div className='segment' data-theme={color === 'dark' ? 'dark' : undefined}>
       <NumberFlow value={value} format={{ minimumIntegerDigits: 2 }} />

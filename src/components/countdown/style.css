@@ -1,7 +1,18 @@
 .countdown {
-  /* @link https://utopia.fyi/clamp/calculator?a=375,768,13—16 */
-  --fluid-13-16: clamp(0.8125rem, 0.6336rem + 0.7634vw, 1rem);
-
   display: inline-flex;
   column-gap: var(--fluid-13-16);
+}
+
+.countdown-with-date > p {
+  color: var(--color-oxford-blue);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 5px;
+  margin-top: 0;
+
+  > span {
+    color: var(--color-dodger-blue);
+  }
 }

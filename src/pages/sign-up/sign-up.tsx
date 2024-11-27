@@ -1,4 +1,4 @@
-import { Countdown } from '../../components/countdown'
+import { CountdownWithDate } from '../../components/countdown'
 import { Header } from '../../components/header'
 import { SignupForm } from '../../components/sign-up-form'
 import './style.css'
@@ -16,10 +16,7 @@ export const SignUp = () => {
             <h1>Work smarter. Save time.</h1>
             <p>Easily manage your projects. Get on the list and receive in-app perks available only to early subscribers. We are moving into final development and getting ready for official launch soon.</p>
           </div>
-          <div className='launch-countdown'>
-            <p>Coming <span>{new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium' }).format(launchDate)}</span></p>
-            <Countdown date={launchDate} />
-          </div>
+          <CountdownWithDate date={launchDate} />
         </div>
         <div className="right">
           <SignupForm />

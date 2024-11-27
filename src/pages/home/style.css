@@ -29,7 +29,6 @@
     background-image: url(../../assets/home/bg-pattern-footer.svg);
     background-position: right 10vw top 50%;
     background-repeat: no-repeat;
-    color: #fff;
 
     > .inner {
       display: flex;
@@ -38,20 +37,9 @@
       justify-content: space-between;
       padding-block: var(--fluid-100-82) var(--fluid-100-91);
     }
-  }
 
-  & .launch-countdown {
-    > p {
-      text-transform: uppercase;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 48px;
-      letter-spacing: 5px;
-      margin-top: 0;
-
-      > span {
-        color: var(--color-dodger-blue);
-      }
+    & .countdown-with-date > p {
+      color: #fff;
     }
   }
 }
@@ -65,7 +53,7 @@
       text-align: center;
     }
 
-    & .launch-countdown > :nth-child(2) {
+    & .countdown-with-date > :nth-child(2) {
       margin-top: 8px;
     }
   }

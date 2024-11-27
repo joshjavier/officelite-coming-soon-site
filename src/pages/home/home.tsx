@@ -1,9 +1,10 @@
 import { Link } from 'react-aria-components'
-import { Countdown } from '../../components/countdown'
 import { Header } from '../../components/header'
 import { Hero } from '../../components/hero'
 import { PricingCard } from '../../components/pricing-card'
 import { basicPack, proPack, ultimatePack } from '../../data/pricing'
+import { CountdownWithDate } from '../../components/countdown'
+
 import './style.css'
 
 export const Home = () => {
@@ -22,10 +23,7 @@ export const Home = () => {
 
       <footer>
         <div className="center inner">
-          <div className='launch-countdown'>
-            <p>Coming <span>{new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium' }).format(launchDate)}</span></p>
-            <Countdown date={launchDate} color='dark' />
-          </div>
+          <CountdownWithDate date={launchDate} color='dark' />
           <Link className='btn btn-primary' href='#'>Get Started</Link>
         </div>
       </footer>

@@ -1,3 +1,4 @@
+import { useSearchParams } from 'react-router'
 import { CountdownWithDate } from '../../components/countdown'
 import { Header } from '../../components/header'
 import { SignupForm } from '../../components/sign-up-form'
@@ -5,6 +6,7 @@ import './style.css'
 
 export const SignUp = () => {
   const launchDate = Date.now() + 4.089374e+9
+  const [searchParams] = useSearchParams()
 
   return (
     <div className='sign-up'>
@@ -19,7 +21,7 @@ export const SignUp = () => {
           <CountdownWithDate date={launchDate} />
         </div>
         <div className="right">
-          <SignupForm />
+          <SignupForm initialPlan={searchParams.get('plan') ?? undefined} />
         </div>
       </main>
     </div>

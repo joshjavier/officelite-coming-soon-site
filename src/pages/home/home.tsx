@@ -24,7 +24,7 @@ export const Home = () => {
       <footer>
         <div className="center inner">
           <CountdownWithDate date={launchDate} color='dark' />
-          <Link className='btn btn-primary' href='#'>Get Started</Link>
+          <Link className='btn btn-primary' href='/sign-up'>Get Started</Link>
         </div>
       </footer>
     </div>

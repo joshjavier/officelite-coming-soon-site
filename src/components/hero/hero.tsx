@@ -9,7 +9,7 @@ export const Hero = () => {
       <div className="hero-content">
         <h1>A simple solution to complex tasks is coming soon</h1>
         <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</p>
-        <Link href="#" className="btn btn-primary">Get Started</Link>
+        <Link href="/sign-up" className="btn btn-primary">Get Started</Link>
       </div>
       <div className="hero-image">
         <HeroImage viewBox='0 0 525 606' preserveAspectRatio='xMidYMin' />

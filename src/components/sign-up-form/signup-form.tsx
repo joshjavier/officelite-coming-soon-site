@@ -7,23 +7,30 @@ import './style.css'
 
 const pricingOptions: Option[] = [
   {
+    id: 'basic',
     label: 'Basic Pack',
     description: 'Free',
   },
   {
+    id: 'pro',
     label: 'Pro Pack',
     description: '$9.99',
   },
   {
+    id: 'ultimate',
     label: 'Ultimate Pack',
     description: '$19.99',
   },
 ]
 
-export const SignupForm = () => {
+interface Props {
+  initialPlan?: string
+}
+
+export const SignupForm = ({ initialPlan }: Props) => {
   return (
     <Form aria-label='Sign up'>
-      <TextField label='Name' placeholder='Name' isRequired />
+      <TextField label='Name' placeholder='Name' isRequired autoFocus />
 
       <TextField
         type='email'
@@ -37,6 +44,7 @@ export const SignupForm = () => {
         items={pricingOptions}
         placeholder='Choose your pack'
         isRequired
+        defaultSelectedKey={initialPlan}
       />
 
       <TextField

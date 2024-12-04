@@ -9,6 +9,7 @@ export const basicPack: PricingPlan = {
     '2 GB storage',
     'Great security and support',
   ],
+  ctaLink: '/sign-up?plan=basic'
 }
 
 export const proPack: PricingPlan = {
@@ -20,6 +21,7 @@ export const proPack: PricingPlan = {
     '50 GB storage',
     'More control and insights',
   ],
+  ctaLink: '/sign-up?plan=pro'
 }
 
 export const ultimatePack: PricingPlan = {
@@ -31,4 +33,5 @@ export const ultimatePack: PricingPlan = {
     '100 GB storage',
     'VIP support',
   ],
+  ctaLink: '/sign-up?plan=ultimate'
 }

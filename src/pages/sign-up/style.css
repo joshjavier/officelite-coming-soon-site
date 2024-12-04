@@ -1,5 +1,7 @@
 .sign-up {
   --wrapper-max-width: 1110px;
+  position: relative;
+
 
   > header {
     padding-block: var(--fluid-46-81) var(--fluid-80-126);
@@ -17,6 +19,28 @@
       flex-shrink: 0;
       width: 100%;
       max-width: 445px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 420px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--color-ebony-clay);
+    background-image: url(../../assets/sign-up/bg-pattern-side.svg);
+    background-repeat: no-repeat;
+    background-position: top -781px center;
+
+    @media screen and (max-width: 1112px) {
+      width: 100vw;
+      height: 375px;
+      top: unset;
+      left: 0;
+      bottom: 0;
     }
   }
 }

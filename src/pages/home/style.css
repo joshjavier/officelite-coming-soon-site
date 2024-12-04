@@ -2,7 +2,7 @@
   --wrapper-max-width: 1110px;
 
   > header {
-    margin-block: var(--fluid-46-81) var(--fluid-80-104);
+    padding-block: var(--fluid-46-81) var(--fluid-80-104);
   }
 
   > .pricing {

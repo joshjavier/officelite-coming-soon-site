@@ -1,5 +1,13 @@
 .home {
   --wrapper-max-width: 1110px;
+  background-image: url(../../assets/home/bg-pattern-header.svg);
+  background-repeat: no-repeat;
+  background-position: top -22vw right -20vw;
+  background-size: var(--fluid-458-1134);
+
+  @media screen and (max-width: 719px) {
+    background-position: top -170px center;
+  }
 
   > header {
     padding-block: var(--fluid-46-81) var(--fluid-80-104);

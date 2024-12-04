@@ -14,14 +14,17 @@ export const Default: Story = {
     label: 'Options',
     items: [
       {
+        id: 'basic',
         label: 'Basic Pack',
         description: 'Free',
       },
       {
+        id: 'pro',
         label: 'Pro Pack',
         description: '$9.99',
       },
       {
+        id: 'ultimate',
         label: 'Ultimate Pack',
         description: '$19.99',
       },

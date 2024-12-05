@@ -1,12 +1,25 @@
 .home {
   --wrapper-max-width: 1110px;
-  background-image: url(../../assets/home/bg-pattern-header.svg);
-  background-repeat: no-repeat;
-  background-position: top -22vw right -20vw;
-  background-size: var(--fluid-458-1134);
+  position: relative;
 
-  @media screen and (max-width: 719px) {
-    background-position: top -170px center;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -22vw;
+    right: -20vw;
+    width: var(--fluid-458-1134);
+    height: var(--fluid-458-1134);
+    background-image: url(../../assets/home/bg-pattern-header.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+    animation: spin infinite 20s linear;
+
+    @media screen and (max-width: 719px) {
+      top: -170px;
+      right: 50%;
+      translate: 50%;
+    }
   }
 
   > header {

@@ -1,4 +1,5 @@
 import { Link } from 'react-aria-components'
+import { VisuallyHidden } from 'react-aria'
 import { Header } from '../../components/header'
 import { Hero } from '../../components/hero'
 import { PricingCard } from '../../components/pricing-card'
@@ -13,13 +14,17 @@ export const Home = () => {
   return (
     <div className='home'>
       <Header />
-      <Hero />
 
-      <div className="pricing switcher center">
-        <PricingCard plan={basicPack} />
-        <PricingCard plan={proPack} featured />
-        <PricingCard plan={ultimatePack} />
-      </div>
+      <main>
+        <Hero />
+
+        <div className="pricing switcher center">
+          <VisuallyHidden elementType='h2'>Pricing</VisuallyHidden>
+          <PricingCard plan={basicPack} />
+          <PricingCard plan={proPack} featured />
+          <PricingCard plan={ultimatePack} />
+        </div>
+      </main>
 
       <footer>
         <div className="center inner">

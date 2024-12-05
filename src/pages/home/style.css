@@ -26,7 +26,7 @@
     padding-block: var(--fluid-46-81) var(--fluid-80-104);
   }
 
-  > .pricing {
+  & .pricing {
     margin-top: var(--fluid-100-184);
     --threshold: 54rem;
     gap: var(--fluid-32-24) 30px;

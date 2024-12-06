@@ -2,7 +2,6 @@
   --wrapper-max-width: 1110px;
   position: relative;
 
-
   > header {
     padding-block: var(--fluid-46-81) var(--fluid-80-126);
   }
